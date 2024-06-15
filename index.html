@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="BootStrap-5/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>FoodBazaar-Online Genral Store</title>
+</head>
+<body>      
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="order-md-last">
+                <h4 class="d-flex justify-content-center align-items-center mb-3">
+                    <span class="text-warning">Your Cart</span>
+                    <span class="badge bg-warning rounded-pill ms-3">3</span>
+                </h4>
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Amul Paneer</h6>
+                            <small class="text-body-secondary">Amul Masala Paneer</small>
+                        </div>
+                        <span class="text-body-secondary"><i class="fa fa-indian-rupee"></i>120</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Safal Pees</h6>
+                            <small class="text-body-secondary">Safal frozen Pees</small>
+                        </div>
+                        <span class="text-body-secondary"><i class="fa fa-indian-rupee"></i>80</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Kissan Ketchup</h6>
+                            <small class="text-body-secondary">Kissan Ketchup Pouch</small>
+                        </div>
+                        <span class="text-body-secondary"><i class="fa fa-indian-rupee"></i>150</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Total(<i class="fa fa-indian-rupee"></i>)</h6>
+                        </div>
+                        <span class="text-dark fw-bold"><i class="fa fa-indian-rupee"></i>250</span>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-warning w-100 my-2 btn-lg">Continue to Checkout</button>
+            </div>
+        </div>
+    </div>
+ <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasSearch" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="order-md-last">
+                <h4 class="d-flex justify-content-center align-items-center mb-3">
+                    <span class="text-primary fw-bold">Search</span>
+                </h4>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="What are you looking for?">
+                    <span class="input-group-text bg-dark text-white">Search</span>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+    <header>
+        <div class="container-fluid">
+            <div class="row py-3 border-bottom">
+                <div class="col-lg-3 col-sm-4 text-center text-sm-start">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-lg-5 col-sm-6 offset-2 offset-md-0 d-none d-lg-block">
+                    <div class="row bg-light rounded-4 py-2 my-2 ">
+                        <div class="col-md-4 d-none d-md-block">
+                            <select class="form-select bg-transparent border-0">
+                                <option selected>All Categories</option>
+                                <option value="1">Grocery</option>
+                                <option value="2">Drink</option>
+                                <option value="3">Bakery</option>
+                            </select>
+                        </div>
+                        <div class="col-md-7 col-11">
+                            <form action="">
+                                <input type="search" class="form-control bg-transparent border-0" placeholder="Seach for more than 2000 products" >
+                            </form>
+                        </div>
+                        <div class="col-1 bg-light">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-8 d-flex justify-content-end align-items-center gap-5 mt-4 mt-sm-0 justify-content-center justify-content-sm-center">
+                    <div class="text-end d-none d-xl-block">
+                        <span class="fs-6 text-muted">For Support</span>
+                        <h5 class="">+91 90807060</h5>
+                    </div>
+                    <ul class="d-flex justify-content-end m-0 list-unstyled">
+                        <li>
+                            <a href="" class="rounded-circle bg-light p-2 mx-1">
+                                <i class="fa fa-user text-muted"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="rounded-circle bg-light p-2 mx-1">
+                                <i class="fa fa-heart text-muted"></i>
+                            </a>
+                        </li>
+                        <li class="d-lg-none">
+                            <a href="" class="rounded-circle  bg-light p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch">
+                                <i class="fa fa-search text-muted"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="text-end d-none d-lg-block dropdown">
+                        <button type="button" class="d-flex flex-column gap-2 lh-1 border-0 bg-transparent" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
+                            <span class="fs-6 text-muted dropdown-toggle">Your Cart</span>
+                            <span class=" fs-5 fw-bold"><i class="fa fa-indian-rupee"></i>250</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center justify-content-sm-between align-items-center">
+                <nav class="navbar navbar-expand-lg d-flex">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasnav">
+                           <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasnav">
+                            <div class="offcanvas-header">
+                              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <select name="cat1" id="cat1" title="cat1" class="form-select bg-transparent border-0 ms-5 me-0 mb-0">
+                                    <option selected>Shop By Department</option>
+                                    <option value="1">Grocery</option>
+                                    <option value="2">Drink</option>
+                                    <option value="3">Bakery</option>
+                                </select>
+                                <ul class="navbar-nav list-inline list-unstyled d-flex gap-md-3 mb-0 ms-3">
+                                  <li class="list-inline-item active">
+                                    <a class="nav-link active text-muted fs-6 fw-bold" href="#">Women</a>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <a class="nav-link text-muted fs-6 fw-bold" href="#">Men</a>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <a class="nav-link text-muted fs-6 fw-bold" href="#">Kids</a>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <a class="nav-link text-muted fs-6 fw-bold" href="#">Tool</a>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <a class="nav-link text-muted fs-6 fw-bold" href="#">Brands</a>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <a class="nav-link text-muted fs-6 fw-bold" href="#">Sale</a>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <a class="nav-link text-muted fs-6 fw-bold" href="#">Blog</a>
+                                  </li>
+                                </ul>   
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="d-none d-lg-block">
+                    <a href="" class="nav-link">
+                        <img src="images/gift.svg" alt="">
+                        <strong class="ms-2 text-dark text-uppercase">get free gift</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>    
+ <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+    <section id="adv" class="py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="brand-block">
+                        <div class="brand-ad large bg-info bg-opacity-10 block-1">
+                            <div class="carousel">
+                                <div class="carousel-cell">
+                                    <div class="row p-5">
+                                        <div class="col-md-7">
+                                            <div class="fs-1 text-warning my-3 mb-4">100% Natural</div>
+                                            <h3 class=" display-4 text-capitalize">Fresh Smoothie And fress juice</h3>
+                                            <p>Healthy drink for hot summer</p>
+                                            <a href="#" class="btn btn-outline-dark btn-lg text-uppercase px-4 py-3 mt-3">shop now</a>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <img src="images/product-thumb-1.png" alt="" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="row p-5">
+                                        <div class="col-md-7">
+                                            <div class="fs-1 text-warning my-3 mb-4">100% Natural</div>
+                                            <h3 class=" display-4 text-capitalize">Fresh Smoothie Pure Tomato Ketchup</h3>
+                                            <p>Healthy drink for hot summer</p>
+                                            <a href="#" class="btn btn-outline-dark btn-lg text-uppercase px-4 py-3 mt-3">shop now</a>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <img src="images/product-thumb-2.png" alt="" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-cell">
+                                    <div class="row p-5">
+                                        <div class="col-md-7">
+                                            <div class="fs-1 text-warning my-3 mb-4">100% Natural</div>
+                                            <h3 class=" display-4 text-capitalize">Fresh Honey Dabur Honey</h3>
+                                            <p>Healthy drink for hot summer</p>
+                                            <a href="#" class="btn btn-outline-dark btn-lg text-uppercase px-4 py-3 mt-3">shop now</a>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <img src="images/product-thumb-3.png" alt="" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>   
+                              </div>
+                              
+                        </div>
+                        <div class="brand-ad brand-1 large bg-success bg-opacity-10 block-2">
+                            <div class="row p-5">
+                                <div class="col-md-7">
+                                    <div class="fs-2 text-muted sale mb-4">20% OFF</div>
+                                    <h3 class="fw-bold display-6 text-capitalize">Fruits & Vegetables</h3>
+                                    <a href="#" class="nav-link text-capitalize">shop collection <i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="brand-ad brand-2 large bg-danger bg-opacity-10 block-3">
+                            <div class="row p-5">
+                                <div class="col-md-7">
+                                    <div class="fs-2 text-muted sale  mb-4">15% OFF</div>
+                                    <h3 class="fw-bold display-6 text-capitalize">Bakery Products</h3>
+                                    <a href="#" class="nav-link text-capitalize">shop collection <i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+    <section class="overflow-hidden py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex flex-wrap justify-content-lg-between px-4">
+                        <h3 class="fs-2 fw-bold ms-5">Category To Choose</h3>
+                        <div class="me-5">
+                            <a href="" class="btn-link text-decoration-none text-muted fw-bold fs-5">View All Categorie <i class="fa fa-arrow-right"></i></a>
+                            <button type="button" id="cat-prev" class="btn btn-light rounded-3"><i class="fa fa-arrow-left ms-2"></i></button>
+                            <button type="button" id="cat-next" class="btn btn-light rounded-3"><i class="fa fa-arrow-right ms-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="categorie-flick">
+                        <div class="carousel">
+                            <div class="carousel-cell">
+                                <a href="" class="nav-link categorie-item">
+                                    <img src="images/icon-soft-drinks-bottle.png" alt="" class="img-fluid">
+                                    <h3 class="categories-title fs-5">soft & enrgy drinks</h3>
+                                </a>
+                            </div>
+                            <div class="carousel-cell">
+                                <a href="" class="nav-link categorie-item">
+                                    <img src="images/icon-animal-products-drumsticks.png" alt="" class="img-fluid">
+                                    <h3 class="categories-title fs-5">Dog & Cat food</h3>
+                                </a>
+                            </div>
+                            <div class="carousel-cell">
+                                <a href="" class="nav-link categorie-item">
+                                    <img src="images/icon-bread-herb-flour.png" alt="" class="img-fluid">
+                                    <h3 class="categories-title fs-5">Herbs & Medicine</h3>
+                                </a>
+                            </div>
+                            <div class="carousel-cell">
+                                <a href="" class="nav-link categorie-item">
+                                    <img src="images/icon-vegetables-broccoli.png" alt="" class="img-fluid">
+                                    <h3 class="categories-title fs-5">Fruits & Vegtables</h3>
+                                </a>
+                            </div>
+                            <div class="carousel-cell">
+                                <a href="" class="nav-link categorie-item">
+                                    <img src="images/icon-wine-glass-bottle.png" alt="" class="img-fluid">
+                                    <h3 class="categories-title fs-5">Wine & Bears</h3>
+                                </a>
+                            </div>
+                            <div class="carousel-cell">
+                                <a href="" class="nav-link categorie-item">
+                                    <img src="images/icon-bread-baguette.png" alt="" class="img-fluid">
+                                    <h3 class="categories-title fs-5">Bread & Bakery</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+    <section class="overflow-hidden py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex flex-wrap justify-content-lg-between px-4">
+                        <h3 class="fs-2 fw-bold ms-5">Newly Arrived Brands</h3>
+                        <div class="me-5">
+                            <a href="" class="btn-link text-decoration-none text-muted fw-bold fs-5">View All Categorie <i class="fa fa-arrow-right"></i></a>
+                            <button type="button" id="brand-prev" class="btn btn-light rounded-3"><i class="fa fa-arrow-left ms-2"></i></button>
+                            <button type="button" id="brand-next" class="btn btn-light rounded-3"><i class="fa fa-arrow-right ms-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="brand-flick">
+                        <div class="carousel">
+                            <div class="carousel-cell">
+                                <div class=" brand-item">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="images/product-thumb-11.jpg" alt="" class="img-fluid rounded">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <small class="text-muted fs-6">Amber jar</small>
+                                            <h3 class="brand-title fs-5">Honey Best Product for Health</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class=" brand-item">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="images/product-thumb-12.jpg" alt="" class="img-fluid rounded">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <small class="text-muted fs-6">Amber jar</small>
+                                            <h3 class="brand-title fs-5">Honey Best Product for Health</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class=" brand-item">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="images/product-thumb-13.jpg" alt="" class="img-fluid rounded">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <small class="text-muted fs-6">Amber jar</small>
+                                            <h3 class="brand-title fs-5">Honey Best Product for Health</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class=" brand-item">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="images/product-thumb-14.jpg" alt="" class="img-fluid rounded">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <small class="text-muted fs-6">Amber jar</small>
+                                            <h3 class="brand-title fs-5">Honey Best Product for Health</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+    <section class="py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-tab">
+                        <div class="d-flex justify-content-lg-between border-bottom mb-0">
+                            <h3 class="fs-2 fw-bold ms-5">Trending Products</h3>
+                            <nav>
+                                <div class="nav nav-tabs border-white" id="nav-tab" title="Tabs">
+                                    <a href="#" class="nav-link text-uppercase fs-5 active" id="nav-all-tab" data-bs-toggle="tab" data-bs-target="#nav-all">All</a>
+                                    <a href="#" class="nav-link text-uppercase fs-5" id="nav-furite-tab" data-bs-toggle="tab" data-bs-target="#nav-fruite">Fruits & Vegetables</a>
+                                    <a href="#" class="nav-link text-uppercase fs-5" id="nav-drink-tab" data-bs-toggle="tab" data-bs-target="#nav-drink">Drinks</a>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="tab-content" id="nav-tabcontent">
+                            <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
+                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5"> 
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 30%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-bananas.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>Fresh Banana</h3>
+                                            <span class="qty">1Dozen</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 60</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 30%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-bananas.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>Fresh Banana</h3>
+                                            <span class="qty">1Dozen</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 60</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 40%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-raspberries.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>raspberries</h3>
+                                            <span class="qty">1kg</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.2</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 160</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 20%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-cucumber.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>cucumber</h3>
+                                            <span class="qty">1kg</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.8</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 40</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 15%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-avocado.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>avocado</h3>
+                                            <span class="qty">1kg</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.8</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 80</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 40%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-tomatoes.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>Tomato</h3>
+                                            <span class="qty">1kg</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.2</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 60</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 20%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-orange-juice.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>orange juice</h3>
+                                            <span class="qty">1kg</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.8</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 80</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 15%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-milk.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>milk</h3>
+                                            <span class="qty">1kg</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.8</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 40</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 40%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-tomatoketchup.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>honey</h3>
+                                            <span class="qty">1kg</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.2</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 140</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 40%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-biscuits.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>biscuits</h3>
+                                            <span class="qty">1kg</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.2</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 20</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-fruite" role="tabpanel" aria-labelledby="nav-furite-tab">
+                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5"> 
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 30%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-bananas.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>Fresh Banana</h3>
+                                            <span class="qty">1Dozen</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 60</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 40%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-raspberries.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>raspberries</h3>
+                                            <span class="qty">1kg</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.2</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 160</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 20%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-cucumber.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>cucumber</h3>
+                                            <span class="qty">1kg</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.8</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 40</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 15%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-avocado.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>avocado</h3>
+                                            <span class="qty">1kg</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.8</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 80</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 40%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-tomatoes.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>Tomato</h3>
+                                            <span class="qty">1kg</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.2</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 60</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-drink" role="tabpanel" aria-labelledby="nav-drink-tab">
+                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5"> 
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 20%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-orange-juice.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>orange juice</h3>
+                                            <span class="qty">1kg</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.8</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 80</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 15%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-milk.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>milk</h3>
+                                            <span class="qty">1kg</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.8</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 40</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="product-item">
+                                            <span class="badge bg-success rounded-pill position-absolute m-3">- 40%</span>
+                                            <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                            <figure>
+                                            <img src="images/thumb-tomatoketchup.png" alt="" class="img-fluid">
+                                            </figure>
+                                            <h3>honey</h3>
+                                            <span class="qty">1kg</span>
+                                            <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.2</span>
+                                            <span class="price"><i class="fa-solid fa-indian-rupee"></i> 140</span>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <div class="input-group product-qty">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                                    </span>
+                                                    <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                                    </span>
+                                                </div>
+                                                <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+    <section class="py-5">
+        <div class="container-fluid">
+            <div class="row g-2">
+                <div class="col-md-6">
+                    <div class="brand-ad  large bg-success bg-opacity-10">
+                        <div class="row p-5">
+                            <div class="col-md-7">
+                                <div class="fs-1 text-warning sale mb-4">Upto 20% Off</div>
+                                <h3 class="fs-2 fw-bold text-capitalize">Luxa Dark Chocolate</h3>
+                                <p>Very tasty Chocolate flavour</p>
+                                <a href="#" class="btn btn-dark btn-lg text-capitalize">shop now</a>
+                            </div>
+                            <div class="col-md-5">
+                                <figure>
+                                    <img src="images/ad-image-3.png" alt="" class="img-fluid">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="brand-ad large bg-danger bg-opacity-10">
+                        <div class="row p-5">
+                            <div class="col-md-7">
+                                <div class="fs-1 text-warning sale mb-4">Upto 25% Off</div>
+                                <h3 class="fs-2 fw-bold text-capitalize">Creamy Muffins</h3>
+                                <p>Very tasty Vanilla flavour</p>
+                                <a href="#" class="btn btn-dark btn-lg text-capitalize">shop now</a>
+                            </div>
+                            <div class="col-md-5">
+                                <figure>
+                                    <img src="images/ad-image-4.png" alt="" class="img-fluid">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+    <section class="overflow-hidden py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex flex-wrap justify-content-lg-between px-4">
+                        <h3 class="fs-2 fw-bold ms-5">Most Popular Products</h3>
+                        <div class="me-5">
+                            <a href="" class="btn-link text-decoration-none text-muted fw-bold fs-5">View All Categorie <i class="fa fa-arrow-right"></i></a>
+                            <button type="button" id="pop-prev" class="btn btn-light rounded-3"><i class="fa fa-arrow-left ms-2"></i></button>
+                            <button type="button" id="pop-next" class="btn btn-light rounded-3"><i class="fa fa-arrow-right ms-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="pop-flick">
+                        <div class="carousel">
+                            <div class="carousel-cell">
+                                <div class="product-item">
+                                    <span class="badge bg-success rounded-pill position-absolute m-3">- 30%</span>
+                                    <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                    <figure>
+                                    <img src="images/thumb-bananas.png" alt="" class="img-fluid">
+                                    </figure>
+                                    <h3>Fresh Banana</h3>
+                                    <span class="qty">1Dozen</span>
+                                    <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+                                    <span class="price"><i class="fa-solid fa-indian-rupee"></i> 60</span>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="input-group product-qty">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                            </span>
+                                            <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                            </span>
+                                        </div>
+                                        <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="product-item">
+                                    <span class="badge bg-success rounded-pill position-absolute m-3">- 20%</span>
+                                    <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                    <figure>
+                                    <img src="images/thumb-orange-juice.png" alt="" class="img-fluid">
+                                    </figure>
+                                    <h3>orange juice</h3>
+                                    <span class="qty">1kg</span>
+                                    <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.8</span>
+                                    <span class="price"><i class="fa-solid fa-indian-rupee"></i> 80</span>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="input-group product-qty">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                            </span>
+                                            <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                            </span>
+                                        </div>
+                                        <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="product-item">
+                                    <span class="badge bg-success rounded-pill position-absolute m-3">- 15%</span>
+                                    <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                    <figure>
+                                    <img src="images/thumb-milk.png" alt="" class="img-fluid">
+                                    </figure>
+                                    <h3>milk</h3>
+                                    <span class="qty">1kg</span>
+                                    <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.8</span>
+                                    <span class="price"><i class="fa-solid fa-indian-rupee"></i> 40</span>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="input-group product-qty">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                            </span>
+                                            <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                            </span>
+                                        </div>
+                                        <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="product-item">
+                                    <span class="badge bg-success rounded-pill position-absolute m-3">- 40%</span>
+                                    <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                    <figure>
+                                    <img src="images/thumb-tomatoketchup.png" alt="" class="img-fluid">
+                                    </figure>
+                                    <h3>honey</h3>
+                                    <span class="qty">1kg</span>
+                                    <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.2</span>
+                                    <span class="price"><i class="fa-solid fa-indian-rupee"></i> 140</span>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="input-group product-qty">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                            </span>
+                                            <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                            </span>
+                                        </div>
+                                        <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="product-item">
+                                    <span class="badge bg-success rounded-pill position-absolute m-3">- 40%</span>
+                                    <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                    <figure>
+                                    <img src="images/thumb-raspberries.png" alt="" class="img-fluid">
+                                    </figure>
+                                    <h3>raspberries</h3>
+                                    <span class="qty">1kg</span>
+                                    <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.2</span>
+                                    <span class="price"><i class="fa-solid fa-indian-rupee"></i> 160</span>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="input-group product-qty">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                            </span>
+                                            <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                            </span>
+                                        </div>
+                                        <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="product-item">
+                                    <span class="badge bg-success rounded-pill position-absolute m-3">- 40%</span>
+                                    <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                    <figure>
+                                    <img src="images/thumb-biscuits.png" alt="" class="img-fluid">
+                                    </figure>
+                                    <h3>biscuits</h3>
+                                    <span class="qty">1kg</span>
+                                    <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.2</span>
+                                    <span class="price"><i class="fa-solid fa-indian-rupee"></i> 20</span>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="input-group product-qty">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                            </span>
+                                            <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                            </span>
+                                        </div>
+                                        <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+    <section class="py-5">
+        <div class="container-fluid">
+            <div class="row bg-success bg-opacity-10 rounded-5 py-5 my-5">
+                <div class="col-md-6">
+                    <h2 class="display-4 ms-5 mt-5">Get <span class="text-warning">25% Discount</span> on your first purchase</h2>
+                    <p class="ms-5 fs-5 text-muted">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                </div>
+                <div class="col-md-6 p-5">
+                    <form action="" class="">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control form-control-lg" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="emai" class="form-control form-control-lg" id="email" placeholder="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="checkbox" class="form-label">
+                                <input type="checkbox" class="form-check-input p-2" id="checkbox">
+                                Subscribe to our newsletter
+                            </label>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-dark btn-lg w-100">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+    <section class="overflow-hidden py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex flex-wrap justify-content-lg-between px-4">
+                        <h3 class="fs-2 fw-bold ms-5">New Arrieved Products</h3>
+                        <div class="me-5">
+                            <a href="" class="btn-link text-decoration-none text-muted fw-bold fs-5">View All Categorie <i class="fa fa-arrow-right"></i></a>
+                            <button type="button" id="arv-prev" class="btn btn-light rounded-3"><i class="fa fa-arrow-left ms-2"></i></button>
+                            <button type="button" id="arv-next" class="btn btn-light rounded-3"><i class="fa fa-arrow-right ms-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="arv-flick">
+                        <div class="carousel">
+                            <div class="carousel-cell">
+                                <div class="product-item">
+                                    <span class="badge bg-success rounded-pill position-absolute m-3">- 30%</span>
+                                    <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                    <figure>
+                                    <img src="images/thumb-bananas.png" alt="" class="img-fluid">
+                                    </figure>
+                                    <h3>Fresh Banana</h3>
+                                    <span class="qty">1Dozen</span>
+                                    <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.5</span>
+                                    <span class="price"><i class="fa-solid fa-indian-rupee"></i> 60</span>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="input-group product-qty">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                            </span>
+                                            <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                            </span>
+                                        </div>
+                                        <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="product-item">
+                                    <span class="badge bg-success rounded-pill position-absolute m-3">- 20%</span>
+                                    <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                    <figure>
+                                    <img src="images/thumb-orange-juice.png" alt="" class="img-fluid">
+                                    </figure>
+                                    <h3>orange juice</h3>
+                                    <span class="qty">1kg</span>
+                                    <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.8</span>
+                                    <span class="price"><i class="fa-solid fa-indian-rupee"></i> 80</span>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="input-group product-qty">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                            </span>
+                                            <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                            </span>
+                                        </div>
+                                        <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="product-item">
+                                    <span class="badge bg-success rounded-pill position-absolute m-3">- 15%</span>
+                                    <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                    <figure>
+                                    <img src="images/thumb-milk.png" alt="" class="img-fluid">
+                                    </figure>
+                                    <h3>milk</h3>
+                                    <span class="qty">1kg</span>
+                                    <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.8</span>
+                                    <span class="price"><i class="fa-solid fa-indian-rupee"></i> 40</span>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="input-group product-qty">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                            </span>
+                                            <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                            </span>
+                                        </div>
+                                        <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="product-item">
+                                    <span class="badge bg-success rounded-pill position-absolute m-3">- 40%</span>
+                                    <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                    <figure>
+                                    <img src="images/thumb-tomatoketchup.png" alt="" class="img-fluid">
+                                    </figure>
+                                    <h3>honey</h3>
+                                    <span class="qty">1kg</span>
+                                    <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.2</span>
+                                    <span class="price"><i class="fa-solid fa-indian-rupee"></i> 140</span>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="input-group product-qty">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                            </span>
+                                            <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                            </span>
+                                        </div>
+                                        <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="product-item">
+                                    <span class="badge bg-success rounded-pill position-absolute m-3">- 40%</span>
+                                    <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                    <figure>
+                                    <img src="images/thumb-raspberries.png" alt="" class="img-fluid">
+                                    </figure>
+                                    <h3>raspberries</h3>
+                                    <span class="qty">1kg</span>
+                                    <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.2</span>
+                                    <span class="price"><i class="fa-solid fa-indian-rupee"></i> 160</span>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="input-group product-qty">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                            </span>
+                                            <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                            </span>
+                                        </div>
+                                        <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="product-item">
+                                    <span class="badge bg-success rounded-pill position-absolute m-3">- 40%</span>
+                                    <a href="" class="btn-wishlist text-decoration-none text-muted"><i class="fa-regular fa-heart"></i></a>
+                                    <figure>
+                                    <img src="images/thumb-biscuits.png" alt="" class="img-fluid">
+                                    </figure>
+                                    <h3>biscuits</h3>
+                                    <span class="qty">1kg</span>
+                                    <span class="rating"><i class="fa-solid fa-star text-warning"></i> 4.2</span>
+                                    <span class="price"><i class="fa-solid fa-indian-rupee"></i> 20</span>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="input-group product-qty">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-danger minus" data-type="minus" title="Minus"><i class="fa fa-minus"></i></button>
+                                            </span>
+                                            <input type="button"  class="form-control input-number text-center border-0 m-0 p-0" value="1">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-success plus" data-type="plus" title="Plus"><i class="fa fa-plus"></i></button>
+                                            </span>
+                                        </div>
+                                        <a href="#" class="nav-link fs-6 fw-bold ms-3">Add to Cart <i class=" fa fa-shopping-cart ms-3 text-muted"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+    <section class="py-5">
+        <div class="container-fluid">
+            <div class="bg-danger bg-opacity-10 rounded-5 py-5">
+               <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="images/phone.png" alt="" class="img-fluid phone-img">
+                        </div>
+                        <div class="col-md-8 text-center">
+                           <h2 class="fs-2 fw-bold text-dark my-5">Shop Faster With Our FoodBazaar Mobile App</h2>
+                           <p class="fs-6 my-5">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                           <div class="d-flex flex-wrap gap-4 justify-content-center align-items-center my-5">
+                              <img src="images/app-store.jpg" alt="" class="img-fluid">
+                              <img src="images/google-play.jpg" alt="" class="img-fluid">
+                           </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </section>
+ <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+    <section class="py-5">
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-sm-3 row-cols-lg-5">
+                <div class="col">
+                    <div class="card my-4 border-0">
+                        <i class="fa-solid fa-2x fa-caravan text-center"></i>
+                        <div class="card-body text-center">
+                            <h4 class="card-title fs-5 fw-bold">Free Delievery</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card my-4 border-0">
+                        <i class="fa-solid fa-2x fa-shield text-center"></i>
+                        <div class="card-body text-center">
+                            <h4 class="card-title fs-5 fw-bold">100% Secure Payment</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card my-4 border-0">
+                        <i class="fa-solid fa-2x fa-gem text-center"></i>
+                        <div class="card-body text-center">
+                            <h4 class="card-title fs-5 fw-bold">Quality Guarantee</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card my-4 border-0">
+                        <i class="fa-solid fa-2x fa-piggy-bank text-center"></i>
+                        <div class="card-body text-center">
+                            <h4 class="card-title fs-5 fw-bold">Guaranted Savings</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card my-4 border-0">
+                        <i class="fa-solid fa-2x fa-gift text-center"></i>
+                        <div class="card-body text-center">
+                            <h4 class="card-title fs-5 fw-bold">Daily Offers</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+    <footer class="py-5">
+        <div class="container-fluid">
+            <div class="row mx-4">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <img src="images/logo.png" alt="">
+                    <div class="my-5">
+                        <a href="" class="btn btn-outline-warning text-dark me-1"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="" class="btn btn-outline-warning text-dark me-1"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="" class="btn btn-outline-warning text-dark me-1"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="" class="btn btn-outline-warning text-dark me-1"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="" class="btn btn-outline-warning text-dark me-1"><i class="fa-brands fa-amazon"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <h3 class="fw-bold">Ultra</h3>
+                    <a href="" class="text-decoration-none text-muted"><h5>About</h5></a>
+                    <a href="" class="text-decoration-none text-muted"><h5>Career</h5></a>
+                    <a href="" class="text-decoration-none text-muted"><h5>Public</h5></a>
+                    <a href="" class="text-decoration-none text-muted"><h5>Affilate</h5></a>
+                    <a href="" class="text-decoration-none text-muted"><h5>Resourse</h5></a>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <h3 class="fw-bold">Ultra</h3>
+                    <a href="" class="text-decoration-none text-muted"><h5>About</h5></a>
+                    <a href="" class="text-decoration-none text-muted"><h5>Career</h5></a>
+                    <a href="" class="text-decoration-none text-muted"><h5>Public</h5></a>
+                    <a href="" class="text-decoration-none text-muted"><h5>Affilate</h5></a>
+                    <a href="" class="text-decoration-none text-muted"><h5>Resourse</h5></a>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <h3 class="fw-bold">Ultra</h3>
+                    <a href="" class="text-decoration-none text-muted"><h5>About</h5></a>
+                    <a href="" class="text-decoration-none text-muted"><h5>Career</h5></a>
+                    <a href="" class="text-decoration-none text-muted"><h5>Public</h5></a>
+                    <a href="" class="text-decoration-none text-muted"><h5>Affilate</h5></a>
+                    <a href="" class="text-decoration-none text-muted"><h5>Resourse</h5></a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <h3 class="fw-bold mb-4">Subscribe Us</h3>
+                    <p>Subscribe to our newsletter to get updates and grand offers</p>
+                    <form action="">
+                        <div class="input-group mb-3"> 
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button type="submit" class="btn btn-warning">Subscribe</button> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="container-fluid">
+        <div class="row mx-3">
+            <div class="col-md-6 mb-1">
+                <p>&copy; 2023-2024 FoodBazaar. All rights reserved</p>
+            </div>
+            <div class="col-md-6 mb-1">
+                <p class="text-lg-end">Designed & Developed by<a href="" class="text-decoration-none text-capitalize"> a complete web devlopment course</a></p>
+            </div>
+        </div>
+    </div>
+ <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="backtotop"><i class="fa-solid fa-arrow-up-from-bracket fa-bounce fs-1"></i></div> 
+ <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+    <script src="jQuery/jquery-3.7.1.js"></script>
+    <script src="BootStrap-5/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/js/all.min.js"></script>  
+    <script src="script.js"></script>
+</body>
+</html>
